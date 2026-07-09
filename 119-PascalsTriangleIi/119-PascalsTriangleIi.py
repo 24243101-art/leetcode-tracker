@@ -1,0 +1,7 @@
+# Last updated: 7/9/2026, 10:08:30 AM
+class Solution:
+    def getRow(self, rowIndex):
+        row = [1]
+        for i in range(rowIndex):
+            row = [1] + [row[j] + row[j + 1] for j in range(len(row) - 1)] + [1]
+        return row
